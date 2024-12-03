@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks Dashboard - TaskMaster</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Tasks Dashboard</h1>
+      <button onclick="logout()">Logout</button>
+    </header>
+
+    <section id="filter-section">
+      <h2>Filter Tasks</h2>
+      <select id="filter-priority" onchange="filterTasks()">
+        <option value="">All</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </section>
+
+    <section id="tasks-section">
+      <h2>Your Tasks</h2>
+      <div id="tasks-list">
+        <p>Loading tasks...</p>
+      </div>
+    </section>
+
+    <section id="add-task-section">
+      <h2>Add/Edit Task</h2>
+      <form id="add-task-form">
+        <input type="hidden" id="task-id"> <!-- Hidden field for editing -->
+        <input type="text" id="title" placeholder="Task Title" required>
+        <input type="text" id="description" placeholder="Task Description">
+        <select id="priority" required>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <input type="date" id="deadline" required>
+        <button type="submit">Save Task</button>
+      </form>
+    </section>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
