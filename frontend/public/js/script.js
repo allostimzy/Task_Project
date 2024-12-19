@@ -1,4 +1,4 @@
-const apiUrl = "http://localhost:4000"; // Backend URL
+const apiUrl = "https://task-project-2.onrender.com"; // Backend URL
 let allTasks = []; // Store all tasks for filtering
 
 // Fetch Tasks
